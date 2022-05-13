@@ -6,9 +6,10 @@ class News {
   News({this.title, this.description, this.urlToImage, this.url});
   factory News.fromJson(Map<String, dynamic> json) {
     return News(
-        title: json['title'],
-        description: json['description'],
-        urlToImage: json['urlToImage'],
-        url: json['url']);
+        title: json['title'] ?? "Não informado",
+        description: json['description'] ?? "Não informado",
+        urlToImage: json['urlToImage'] ??
+            "https://i.ibb.co/BVkfMSz/image-not-found.png",
+        url: json['url'] ?? 'Não informado');
   }
 }

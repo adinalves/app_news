@@ -1,14 +1,13 @@
 import 'package:app_news/screens/home.dart';
 import 'package:app_news/style/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'App News',
     theme: ThemeData(
-      //  fontFamily: 'Montserrat',
+      fontFamily: 'Montserrat',
       appBarTheme: const AppBarTheme(
         backgroundColor: kBackgroundColor,
       ),
