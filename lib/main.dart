@@ -16,6 +16,6 @@ void main() {
         hintStyle: TextStyle(color: primaryTextColor),
       ),
     ),
-    home: HomePage(),
+    home: const HomePage(),
   ));
 }
