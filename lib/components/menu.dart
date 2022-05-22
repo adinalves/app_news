@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import '../style/colors.dart';
 
 class Menu extends StatelessWidget {
-  final TextEditingController keyword = TextEditingController();
-  //void Function(String)? search;
   final Function changeSearch;
+  final TextEditingController keyword;
 
-  Menu({Key? key, required this.changeSearch}) : super(key: key);
+  const Menu({Key? key, required this.changeSearch, required this.keyword})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print('novo widget');
     return AppBar(
       toolbarHeight: 63,
       leading: const Padding(
