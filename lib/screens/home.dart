@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
             changeSearch: changeSearch,
             keyword: keyword,
           ),
-          preferredSize: const Size.fromHeight(53.0)),
+          preferredSize: const Size.fromHeight(64.0)),
       body: Column(
         children: [
           const SizedBox(height: 12),
@@ -101,7 +101,12 @@ class _HomePageState extends State<HomePage> {
                   }),
             ),
           if (loading)
-            const Expanded(child: Center(child: CircularProgressIndicator())),
+            ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: 20,
+                  maxWidth: 20,
+                ),
+                child: Center(child: CircularProgressIndicator())),
         ],
       ),
     );
