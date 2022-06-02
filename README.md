@@ -1,4 +1,9 @@
+<head>
+ul li {
+    display: inline-block;
+}
 
+</head>
    <h2 align="left">Topics 📋</h2>
 
    <p>
@@ -35,6 +40,17 @@
     <span>Screeshot 3</span>
 </div>
 
+ <ul>
+     <li>
+        <img src="screenshots/screenshot_1.png">
+    </li>
+    <li>
+        <img src="screenshots/screenshot_2.png">
+    </li>
+     <li>
+        <img src="screenshots/screenshot_3.png">"
+    </li>
+</ul>
 
 
 
