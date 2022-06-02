@@ -1,10 +1,10 @@
 
-   <h2 align="center">Topics 📋</h2>
+   <h2 align="left">Topics 📋</h2>
 
    <p>
    
    - [About 📖](#about-)
-   - [Preview 📱](#screenshots-)
+   - [Screenshots 📱](#screenshots-)
    - [How to Use 🤔](#how-to-use-)
    - [How to Contribute 💪](#how-to-contribute-)
 
@@ -12,7 +12,7 @@
 
 
 
-<h2 align="center">About 📖</h2>
+<h2 align="left">About 📖</h2>
    
 <p align="justify">   
    App that searches for news about technology in Brazil.<br>
@@ -20,7 +20,7 @@
 
 
 
-<h2 align="center">Screenshots 📱</h2><br>
+<h2 align="Left">Screenshots 📱</h2><br>
 
    <div class="box">
     <img src="screenshots/screenshot_1.png"/>
@@ -39,7 +39,7 @@
 
 
 
-<h2 align="center">Challenges and Learnings along the way 🤯</h2>
+<h2 align="Left">Challenges and Learnings along the way 🤯</h2>
 
    <p align="justify">
    This application for searching News through the API provided by <a href="https://newsapi.org/">NewsAPI</a> very well documented and structured.<br>
@@ -51,7 +51,7 @@
 
 
 
-<h2 align="center">How to Use </h2>
+<h2 align="Left">How to Use </h2>
 
    ```   
    - Clone this repository:
@@ -69,7 +69,7 @@
 
 
 
-<h2 align="center">How to Contribute 💪</h2>
+<h2 align="Left">How to Contribute 💪</h2>
 
    ```
    - Fork the project 
@@ -85,10 +85,4 @@
    ```
 
 
-<style>
-div.box {
-	width: 150px;
-	display: inline-block;
-}
-</style>
  
