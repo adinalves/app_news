@@ -35,13 +35,7 @@
     <span>Screeshot 3</span>
 </div>
 
-<style>
-div.box {
-	width: 150px;
-	display: inline-block;
-}
-</style>
- 
+
 
 
 
@@ -49,8 +43,8 @@ div.box {
 
    <p align="justify">
    This application for searching News through the API provided by <a href="https://newsapi.org/">NewsAPI</a> very well documented and structured.<br>
-   Here was my second experience using APIs, and I did well in both, despite the doubts I had about how to consult, I managed to understand the concept, and how to do it.<br>
-   Certainly with a lot of practice I will learn more and more about it.<br>
+   Here was my second experience using APIs, and I did well in both, despite the doubts I had about how to consult, I managed to understand the concept, and how to do it.
+   Certainly with a lot of practice I will learn more and more about it.
    I also learned a lot about new widgets, layouts, and logic.
 
    </p> 
@@ -91,4 +85,10 @@ div.box {
    ```
 
 
-
+<style>
+div.box {
+	width: 150px;
+	display: inline-block;
+}
+</style>
+ 
