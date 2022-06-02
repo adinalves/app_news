@@ -28,15 +28,15 @@ ul li {
 <h2 align="Left">Screenshots 📱</h2><br>
 
 
-    <p align="center">
+   <p align="center">
       <img src="screenshots/screenshot_1.png" width="100">
    </p>
 
-    <p align="center">
+   <p align="center">
       <img src="screenshots/screenshot_2.png" width="100">
    </p>
 
-    <p align="center">
+   <p align="center">
       <img src="screenshots/screenshot_3.png" width="100">
    </p>
 
