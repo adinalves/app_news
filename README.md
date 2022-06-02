@@ -52,7 +52,7 @@
 
 
 
-<h2 align="Left">How to Use </h2>
+<h2 align="Left">How to Use</h2>
 
    ```   
    - Clone this repository:
