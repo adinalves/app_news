@@ -1,16 +1,87 @@
-# app_news
 
-A new Flutter project.
+   <h2 align="center">Topics 📋</h2>
 
-## Getting Started
+   <p>
+   
+   - [About 📖](#about-)
+   - [Preview 📱](#screenshots-)
+   - [How to Use 🤔](#how-to-use-)
+   - [How to Contribute 💪](#how-to-contribute-)
 
-This project is a starting point for a Flutter application.
+   </p>
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<h2 align="center">About 📖</h2>
+   
+<p align="center">   
+   App that searches for news about technology in Brazil.<br>
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+<h2 align="center">Screenshots 📱</h2><br>
+
+   <p align="center">
+      <img src="screenshots/screenshot_1.png" width="400">
+   </p>
+
+   <p align="center">
+      <img src="screenshots/screenshot_2.png" width="400">
+   </p>
+
+   <p align="center">
+      <img src="screenshots/screenshot_3.png" width="400">
+   </p>
+   
+ 
+
+---
+
+<h2 align="center">Challenges and Learnings along the way 🤯</h2>
+
+   <p>
+   This application for searching News through the API provided by <a href="https://newsapi.org/">NewsAPI</a> very well documented and structured.<br>
+   Here was my second experience using APIs, and I did well in both, despite the doubts I had about how to consult, I managed to understand the concept, and how to do it.<br>
+   Certainly with a lot of practice I will learn more and more about it.<br>
+   I also learned a lot about new widgets, layouts, and logic.
+
+   </p> 
+
+---
+
+<h2 align="center">How to Use </h2>
+
+   ```   
+   - Clone this repository:
+   $ git clone https://github.com/adinalves/app_news.git app_news
+
+   - Enter in directory:
+   $ cd app_news
+
+   - For install dependencies:
+   $ flutter pub get
+
+   - Run the app: 
+   $ flutter run
+   ```
+
+---
+
+<h2 align="center">How to Contribute 💪</h2>
+
+   ```
+   - Fork the project 
+
+   - Create a new branch with your changes:
+   $ git checkout -b my-feature
+
+   - Save your changes and create a commit message telling you what you did:
+   $ git commit -m "feature: My new feature"
+
+   - Submit your changes:
+   $ git push origin my-feature
+   ```
+
+---
+

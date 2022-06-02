@@ -1,10 +1,11 @@
-import 'dart:convert';
 import 'package:app_news/components/menu.dart';
+import 'package:app_news/controller.dart';
 import 'package:app_news/style/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter_mobx/flutter_mobx.dart';
+
 import '../components/card_news.dart';
-import '../models/news.dart';
+
 import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,38 +16,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<News> _news = [];
-
-  bool finishScroll = false;
+  Controller controller = Controller();
   int currentPage = 1;
   ScrollController scrollController = ScrollController();
-  bool loading = true;
   final TextEditingController keyword = TextEditingController();
 
-  Future<void> searchNews({int page = 1}) async {
-    setState(() {
-      loading = true;
-    });
-
-    var response = await http.get(
-      Uri.parse(
-          'https://newsapi.org/v2/top-headlines?country=br&category=technology&pageSize=3&q=${keyword.text}&page=$page&apiKey=353cf06cb084467eaa1f7cc2ae55e40d'),
-    );
-
-    setState(() {
-      currentPage = page;
-
-      _news += (jsonDecode(response.body)['articles'] as List)
-          .map((e) => News.fromJson(e))
-          .toList();
-      loading = false;
-    });
-  }
-
   changeSearch(String keyword) {
-    _news = [];
+    currentPage = 1;
     this.keyword.text = keyword;
-    searchNews();
+    controller.searchNews(keyword: this.keyword.text);
   }
 
   @override
@@ -57,15 +35,14 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     scrollController.addListener(() {
       double pixels = scrollController.position.pixels;
-      double scrollSize = scrollController.position
-          .maxScrollExtent; // Se tiver no final da lista pode-se buscar novos usuarios
-
-      if (pixels == scrollSize && !finishScroll) {
-        searchNews(page: currentPage + 1);
+      double scrollSize = scrollController.position.maxScrollExtent;
+      if (pixels == scrollSize && !controller.finishScroll) {
+        currentPage++;
+        controller.searchNews(page: currentPage, keyword: keyword.text);
       }
     });
 
-    searchNews();
+    controller.searchNews(keyword: keyword.text);
   }
 
   @override
@@ -77,38 +54,67 @@ class _HomePageState extends State<HomePage> {
             keyword: keyword,
           ),
           preferredSize: const Size.fromHeight(64.0)),
-      body: Column(
-        children: [
-          const SizedBox(height: 12),
-          const Text(
-            "Tecnologia",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: primaryTextColor,
-                fontSize: 21,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Montserrat'),
-          ),
-          const SizedBox(height: 15),
-          if (_news.isNotEmpty)
-            Expanded(
-              child: ListView.builder(
-                  controller: scrollController,
-                  shrinkWrap: true,
-                  itemCount: _news.length,
-                  itemBuilder: (context, index) {
-                    return CardNews(newCard: _news[index]);
-                  }),
+      body: Observer(builder: (_) {
+        return Column(
+          children: [
+            const SizedBox(height: 12),
+            const Text(
+              "Tecnologia",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: primaryTextColor,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: 'Montserrat'),
             ),
-          if (loading)
-            ConstrainedBox(
-                constraints: BoxConstraints(
-                  minWidth: 20,
-                  maxWidth: 20,
-                ),
-                child: Center(child: CircularProgressIndicator())),
-        ],
-      ),
+            const SizedBox(height: 15),
+            if (controller.news.isNotEmpty)
+              Expanded(
+                child: ListView.builder(
+                    controller: scrollController,
+                    shrinkWrap: true,
+                    itemCount: controller.news.length,
+                    itemBuilder: (context, index) {
+                      return CardNews(newCard: controller.news[index]);
+                    }),
+              ),
+            if (controller.loading)
+              Center(
+                child: ConstrainedBox(
+                    constraints: const BoxConstraints(
+                      minWidth: 20,
+                      maxWidth: 30,
+                      maxHeight: 30,
+                      minHeight: 20,
+                    ),
+                    child: const Center(child: CircularProgressIndicator())),
+              ),
+            if (controller.finishScroll) buildToast(),
+          ],
+        );
+      }),
     );
   }
 }
+
+Widget buildToast() => Container(
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: secondaryBackgroundColor,
+          border: Border.all(
+            color: borderColor,
+            width: 1,
+          )),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: const [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              'Não existem mais notícias para buscar',
+              style: TextStyle(color: primaryTextColor, fontSize: 17),
+            ),
+          )
+        ],
+      ),
+    );
