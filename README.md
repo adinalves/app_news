@@ -3,10 +3,10 @@
 
    <p>
    
-   - [About](#about-)
-   - [Screenshots](#screenshots-)
-   - [How to Use](#how-to-use-)
-   - [How to Contribute](#how-to-contribute-)
+   - [About](#about)
+   - [Screenshots](#screenshots)
+   - [How to Use](#how-to-use)
+   - [How to Contribute](#how-to-contribute)
 
    </p>
 
