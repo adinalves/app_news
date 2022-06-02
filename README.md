@@ -1,5 +1,5 @@
 
-   <h2 align="left">Topics 📋</h2>
+   <h2 align="left">Topics</h2>
 
    <p>
    
@@ -40,7 +40,7 @@
 
 
 
-<h2 align="Left">Challenges and Learnings along the way 🤯</h2>
+<h2 align="Left">Challenges and Learnings along the way</h2>
 
    <p align="justify">
    This application for searching News through the API provided by <a href="https://newsapi.org/">NewsAPI</a> very well documented and structured.<br>
