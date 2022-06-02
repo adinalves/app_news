@@ -1,23 +1,18 @@
-<head>
-ul li {
-    display: inline-block;
-}
 
-</head>
    <h2 align="left">Topics 📋</h2>
 
    <p>
    
-   - [About 📖](#about-)
-   - [Screenshots 📱](#screenshots-)
-   - [How to Use 🤔](#how-to-use-)
-   - [How to Contribute 💪](#how-to-contribute-)
+   - [About](#about-)
+   - [Screenshots](#screenshots-)
+   - [How to Use](#how-to-use-)
+   - [How to Contribute](#how-to-contribute-)
 
    </p>
 
 
 
-<h2 align="left">About 📖</h2>
+<h2 align="left">About</h2>
    
 <p align="justify">   
    App that searches for news about technology in Brazil.<br>
@@ -25,19 +20,19 @@ ul li {
 
 
 
-<h2 align="Left">Screenshots 📱</h2><br>
+<h2 align="Left">Screenshots</h2><br>
 
 
    <p align="center">
-      <img src="screenshots/screenshot_1.png" width="100">
+      <img src="screenshots/screenshot_1.png" width="150">
    </p>
 
    <p align="center">
-      <img src="screenshots/screenshot_2.png" width="100">
+      <img src="screenshots/screenshot_2.png" width="150">
    </p>
 
    <p align="center">
-      <img src="screenshots/screenshot_3.png" width="100">
+      <img src="screenshots/screenshot_3.png" width="150">
    </p>
 
 
@@ -75,7 +70,7 @@ ul li {
 
 
 
-<h2 align="Left">How to Contribute 💪</h2>
+<h2 align="Left">How to Contribute</h2>
 
    ```
    - Fork the project 
