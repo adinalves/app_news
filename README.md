@@ -27,22 +27,11 @@ ul li {
 
 <h2 align="Left">Screenshots 📱</h2><br>
 
-   <div class="box">
-    <img src="screenshots/screenshot_1.png"/>
-    <span>Screeshot 1</span>
-</div>
-<div class="box">
-    <img src="screenshots/screenshot_2.png"/>
-    <span>Screeshot 2</span>
-</div>
-<div class="box">
-    <img src="screenshots/screenshot_3.png"/>
-    <span>Screeshot 3</span>
-</div>
 
- <ul>
+
+ <ul style="display: inline-block">
      <li>
-        <img src="screenshots/screenshot_1.png">
+        <img src="screenshots/screenshot_1.png" >
     </li>
     <li>
         <img src="screenshots/screenshot_2.png">
